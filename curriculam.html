@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Curriculum | R.S MEMORIAL HIGH SCHOOL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="left">
+            <img src="school-logo.png" alt="School Logo" class="logo">
+            <strong style="font-size: xx-large;">R.S MEMORIAL HIGH SCHOOL</strong>
+        </div>
+      <div class="right">
+            <span class="top-email">✉︎ info@company.com</span>
+            <span class="top-phone">📞 011-112-8596</span>
+            <span class="top-hours">◴ Mon-Fri: 9am-5pm</span>
+            <span style="font-weight: lighter;">Notices / Announcements</span>
+            <span class="social">
+                <a href="https://www.linkedin.com/"><img src="linkedin.png" alt="LinkedIn" style="height: 20px;"></a>
+                <a href="https://x.com/"><img src="twitter.png" alt="Twitter"style="height: 20px;" ></a>
+                <a href="https://www.facebook.com/"><img src="facebook.png" alt="Facebook"style="height: 20px;"></a>
+            </span>
+        </div>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="curriculam.html" class="active">Curriculum</a></li>
+            <li><a href="facilities.html">Facilities</a></li>
+            <!-- <li><a href="#">Curricular Activities</a></li> -->
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="reach.html">Reach Us</a></li>
+            <li><a href="career.html">Career/Jobs</a></li>
+        </ul>
+    </nav>
+    <section class="curriculum-hero">
+        <div class="curriculum-hero-left">
+            <h1>Shaping Futures<br>with a Balanced Curriculum</h1>
+            <p class="curriculum-hero-desc">
+                Since 2003, we've nurtured students with academic excellence, co-curricular activities, and life skills.
+            </p>
+            <div class="curriculum-hero-btns">
+                <a href="#" class="curriculum-btn">Explore Curriculum</a>
+                <a href="#" class="curriculum-btn curriculum-btn-outline">Download Prospectus</a>
+            </div>
+        </div>
+        <div class="curriculum-hero-right">
+            <div class="curriculum-hero-img-main">
+                <img src="people.jpg" alt="Classroom">
+                <div class="curriculum-hero-info-box">
+                    <ul>
+                        <li><span class="curriculum-info-icon">G</span> 100% Results</li>
+                        <li><span class="curriculum-info-icon">G</span> 20+ Years of Excellence</li>
+                        <li><span class="curriculum-info-icon">G</span> Award-Winning Faculty.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="curriculum-hero-img-side">
+                <img src="library.jpg" alt="Library">
+            </div>
+        </div>
+    </section>
+
+        <section class="curriculum-tabs-section">
+            <div class="curriculum-tabs">
+                <button class="curriculum-tab" data-tab="core"><span class="tab-icon">📚</span> Core Subjects</button>
+                <button class="curriculum-tab active" data-tab="co"><span class="tab-icon">🔑</span> Co - Curricular Activities</button>
+                <button class="curriculum-tab" data-tab="holistic"><span class="tab-icon">🌱</span> Holistic Development</button>
+                <button class="curriculum-tab" data-tab="digital"><span class="tab-icon">💻</span> Digital Learning</button>
+            </div>
+            <div class="curriculum-subjects-grid">
+                <div class="curriculum-subject">
+                    <img src="arts.png" alt="Arts & Crafts">
+                    <div class="curriculum-subject-title">Arts & Crafts</div>
+                </div>
+                <div class="curriculum-subject">
+                    <img src="sport.png" alt="Sports & Physical Education">
+                    <div class="curriculum-subject-title">Sports & Physical Education</div>
+                </div>
+                <div class="curriculum-subject">
+                    <img src="dance.png" alt="Music & Dance">
+                    <div class="curriculum-subject-title">Music & Dance</div>
+                </div>
+                <div class="curriculum-subject">
+                    <img src="speak.png" alt="Debate, Drama & Public Speaking">
+                    <div class="curriculum-subject-title">Debate, Drama & Public Speaking</div>
+                </div>
+                <div class="curriculum-subject">
+                    <img src="robotics.png" alt="Robotics & Innovation Club">
+                    <div class="curriculum-subject-title">Robotics & Innovation Club</div>
+                </div>
+            </section>
+            <script>
+            // Simple tab switcher for curriculum tabs
+            document.querySelectorAll('.curriculum-tab').forEach(function(tabBtn) {
+                tabBtn.addEventListener('click', function() {
+                    document.querySelectorAll('.curriculum-tab').forEach(btn => btn.classList.remove('active'));
+                    tabBtn.classList.add('active');
+                    const tab = tabBtn.getAttribute('data-tab');
+                    const grid = document.querySelector('.curriculum-subjects-grid');
+                    if (tab === 'core') {
+                        grid.innerHTML = `
+                            <div class="curriculum-subject">
+                                    <img src="english.png" alt="English">
+                                    <div class="curriculum-subject-title">English</div>
+                            </div>
+                            <div class="curriculum-subject">
+                                    <img src="math.png" alt="Mathematics">
+                                    <div class="curriculum-subject-title">Mathematics</div>
+                            </div>
+                            <div class="curriculum-subject">
+                                    <img src="social.png" alt="Social Science">
+                                    <div class="curriculum-subject-title">Social Science</div>
+                            </div>
+                            <div class="curriculum-subject">
+                                    <img src="computer.png" alt="Computer Science & ICT">
+                                    <div class="curriculum-subject-title">Computer Science & ICT</div>
+                            </div>
+                            <div class="curriculum-subject">
+                                    <img src="science.png" alt="Science">
+                                    <div class="curriculum-subject-title">Science</div>
+                            </div>
+                        `;
+                    } else if (tab === 'co') {
+                        grid.innerHTML = `
+                            <div class="curriculum-subject">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/2721/2721087.png" alt="Arts & Crafts">
+                                    <div class="curriculum-subject-title">Arts & Crafts</div>
+                            </div>
+                            <div class="curriculum-subject">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/2721/2721091.png" alt="Sports & Physical Education">
+                                    <div class="curriculum-subject-title">Sports & Physical Education</div>
+                            </div>
+                            <div class="curriculum-subject">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/2721/2721093.png" alt="Music & Dance">
+                                    <div class="curriculum-subject-title">Music & Dance</div>
+                            </div>
+                            <div class="curriculum-subject">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/2721/2721100.png" alt="Debate, Drama & Public Speaking">
+                                    <div class="curriculum-subject-title">Debate, Drama & Public Speaking</div>
+                            </div>
+                            <div class="curriculum-subject">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/2721/2721102.png" alt="Robotics & Innovation Club">
+                                    <div class="curriculum-subject-title">Robotics & Innovation Club</div>
+                            </div>
+                        `;
+                    } else if (tab === 'holistic') {
+                        grid.innerHTML = `
+                            <div class="curriculum-subject">
+                                    <img src="value.png" alt="Value Education & Life Skills">
+                                    <div class="curriculum-subject-title">Value Education & Life Skills</div>
+                            </div>
+                            <div class="curriculum-subject">
+                                    <img src="environment.png" alt="Environmental Awareness Programs">
+                                    <div class="curriculum-subject-title">Environmental Awareness Programs</div>
+                            </div>
+                            <div class="curriculum-subject">
+                                    <img src="personality.png" alt="Personality Development & Leadership Training">
+                                    <div class="curriculum-subject-title">Personality Development & Leadership Training</div>
+                            </div>
+                            <div class="curriculum-subject">
+                                    <img src="community.png" alt="Community Service & Social Responsibility">
+                                    <div class="curriculum-subject-title">Community Service & Social Responsibility</div>
+                            </div>
+                        `;
+                    } else if (tab === 'digital') {
+                        grid.innerHTML = `
+                            <div class=\"curriculum-subject\" style=\"width:100%;display:flex;align-items:center;justify-content:flex-start;gap:24px;margin-bottom:32px;\">
+                                    <img src=\"smart.png\" alt=\"Smart Classrooms\" style=\"width:80px;height:80px;object-fit:contain;border-radius:50%;background:#fff;box-shadow:0 2px 8px 0 rgba(0,0,0,0.06);\">
+                                    <div class=\"curriculum-subject-title\" style=\"font-size:1.25rem;font-weight:500;\">Smart Classrooms with interactive technology</div>
+                            </div>
+                            <div class=\"curriculum-subject\" style=\"width:100%;display:flex;align-items:center;justify-content:center;gap:24px;margin-bottom:32px;\">
+                                    <div class=\"curriculum-subject-title\" style=\"font-size:1.25rem;font-weight:500;\">E-learning resources for self-paced study</div>
+                                    <img src=\"e-learning.png\" alt=\"E-learning\" style=\"width:80px;height:80px;object-fit:contain;border-radius:50%;background:#fff;box-shadow:0 2px 8px 0 rgba(0,0,0,0.06);\">
+                            </div>
+                            <div class=\"curriculum-subject\" style=\"width:100%;display:flex;align-items:center;justify-content:flex-start;gap:24px;\">
+                                    <img src=\"assesments.png\" alt=\"Assessments\" style=\"width:80px;height:80px;object-fit:contain;border-radius:50%;background:#fff;box-shadow:0 2px 8px 0 rgba(0,0,0,0.06);\">
+                                    <div class=\"curriculum-subject-title\" style=\"font-size:1.25rem;font-weight:500;\">Regular assessments and progress tracking</div>
+                            </div>
+                        `;
+                    }
+                });
+            });
+            </script>
+            </div>
+            <div class="curriculum-tabs-decor">
+                <span class="curriculum-tabs-dash"></span>
+                <span class="curriculum-tabs-hex"></span>
+                <span class="curriculum-tabs-dash"></span>
+                <span class="curriculum-tabs-hex"></span>
+                <span class="curriculum-tabs-dash"></span>
+                <span class="curriculum-tabs-hex"></span>
+                <span class="curriculum-tabs-dash"></span>
+            </div>
+        </section>
+            <section class="curriculum-overview-section">
+        <h2 class="curriculum-overview-title">Curriculum <span class="curriculum-overview-underline"></span></h2>
+        <div class="curriculum-overview-grid">
+            <div class="curriculum-overview-card">
+                <div class="curriculum-overview-bird">🪶</div>
+                <h3>Primary (Classes I–V)</h3>
+                <div class="curriculum-overview-focus"><span class="focus-dot focus-dot-blue"></span> <b>Focus:</b> Building strong foundations through joyful learning.</div>
+                <ul>
+                    <li>English & Hindi (Language Skills)</li>
+                    <li>Mathematics (Basic Concepts & Problem-Solving)</li>
+                    <li>Environmental Studies (Science + Social Awareness)</li>
+                    <li>Art, Music & Craft</li>
+                    <li>Physical Education & Yoga</li>
+                    <li>Computer Basics</li>
+                </ul>
+            </div>
+            <div class="curriculum-overview-card">
+                <div class="curriculum-overview-bird">🪶</div>
+                <h3>Middle (Classes VI–VIII)</h3>
+                <div class="curriculum-overview-focus"><span class="focus-dot focus-dot-green"></span> <b>Focus:</b> Conceptual clarity & curiosity-driven learning.</div>
+                <ul>
+                    <li>English, Hindi & Sanskrit (Languages)</li>
+                    <li>Mathematics (Algebra, Geometry, Data Handling)</li>
+                    <li>Science (Physics, Chemistry, Biology basics)</li>
+                    <li>Social Science (History, Civics, Geography, Economics)</li>
+                    <li>Computer Applications & Coding</li>
+                    <li>Arts, Sports, Debates & Clubs</li>
+                </ul>
+            </div>
+            <div class="curriculum-overview-card">
+                <div class="curriculum-overview-bird">🪶</div>
+                <h3>Secondary (Classes IX–X)</h3>
+                <div class="curriculum-overview-focus"><span class="focus-dot focus-dot-orange"></span> <b>Focus:</b> Academic depth, analytical skills & exam readiness.</div>
+                <ul>
+                    <li>English & Hindi (Core Languages)</li>
+                    <li>Mathematics (Algebra, Trigonometry, Statistics)</li>
+                    <li>Science (Physics, Chemistry, Biology with lab work)</li>
+                    <li>Social Science (History, Political Science, Geography, Economics)</li>
+                    <li>Information Technology</li>
+                    <li>Life Skills, Personality Development & Leadership Activities</li>
+                </ul>
+            </div>
+            <div class="curriculum-overview-card">
+                <div class="curriculum-overview-bird">🪶</div>
+                <h3>Senior Secondary (XI–XII)</h3>
+                <div class="curriculum-overview-focus"><span class="focus-dot focus-dot-yellow"></span> <b>Focus:</b> Specialization & career preparation.</div>
+                <div class="curriculum-overview-streams"><b>Streams Offered:</b></div>
+                <ul>
+                    <li><b>Science:</b> Physics, Chemistry, Mathematics/Biology, English, Computer Science</li>
+                    <li><b>Commerce:</b> Accountancy, Business Studies, Economics, English, Mathematics/IT</li>
+                    <li><b>Humanities (optional):</b> History, Political Science, Sociology, Psychology, English</li>
+                    <li>Career Counseling, Olympiad & Competitive Exam Preparation</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+        <div class="board-results-section" style="background:url(banner.png);">
+    </div>
+
+    <section class="top-performers-section">
+        <h2 class="top-performers-title">Our Top Performers <span class="top-performers-underline"></span></h2>
+        <div class="top-performers-grid">
+            <div class="top-performer-card">
+                <div class="top-performer-text">
+                    The guidance from teachers and access to modern labs helped me score 97% in CBSE Boards. The balanced approach of academics and co-curriculars shaped my personality and confidence.
+                    <div class="top-performer-name">Ananya Sharma</div>
+                    <div class="top-performer-class">Class XII (Science)</div>
+                </div>
+                <div class="top-performer-img-box">
+                    <img src="https://randomuser.me/api/portraits/men/31.jpg" alt="Ananya Sharma">
+                </div>
+            </div>
+            <div class="top-performer-card">
+                <div class="top-performer-img-box">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rohan Verma">
+                </div>
+                <div class="top-performer-text">
+                    Scoring 96% was a result of the school's well-structured assessments and regular doubt sessions. The smart classrooms and e-learning also made learning enjoyable.
+                    <div class="top-performer-name">Rohan Verma</div>
+                    <div class="top-performer-class">Class X (Topper)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+<section class="contact-section">
+    <div class="contact-bg-text">contact us</div>
+    <div class="contact-container">
+        <div class="contact-left">
+            <h2>Have a Query!<br><span>Let’s discuss</span></h2>
+            <p>Thank you for getting in touch!<br>
+            Kindly,<br>
+            Fill the form, have a great day!</p>
+        </div>
+        <form class="contact-form">
+            <div class="form-row">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-row">
+                <input type="text" placeholder="Phone Number" required>
+                <select required>
+                    <option value="">Country</option>
+                    <option value="IN">India</option>
+                    <option value="US">USA</option>
+                    <option value="UK">UK</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <input type="text" placeholder="Describe Query" required>
+                <select required>
+                    <option value="">Query Related</option>
+                    <option value="admission">Admission</option>
+                    <option value="fees">Fees</option>
+                    <option value="events">Events</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <textarea placeholder="Message" rows="3" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-left">
+            <img src="school-logo.png" alt="#" class="footer-logo">
+            <div class="school-name">R.S.MEMORIAL<br>HIGH SCHOOL</div>
+            <div class="school-address">Jagee Nagar Ara, Ara, Bihar 802301, IN</div>
+        </div>
+        <div class="footer-links">
+            <div>
+                <h4>Important Links</h4>
+                <ul>
+                    <li><a href="#">E-Brochure 2026-2027</a></li>
+                    <li><a href="#">Admissions 2026-2027</a></li>
+                    <li><a href="#">Alumni Association</a></li>
+                    <li><a href="#">Application Forms</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Quick Connect</h4>
+                <ul>
+                    <li><a href="mailto:info.rsmcsl@gmail.com">info.rsmcsl@gmail.com</a></li>
+                    <li><a href="tel:+919430221646">+91-9430221646</a></li>
+                    <li><a href="tel:+919525565768">+91-9525565768</a></li>
+                    <li><a href="tel:+917061578977">+91-7061578977</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Portal Login</a></li>
+                    <li><a href="#">E-Library</a></li>
+                    <li><a href="#">Webinar series</a></li>
+                    <li><a href="#">Photo gallery</a></li>
+                    <li><a href="#">Day Care</a></li>
+                    <li><a href="#">Rules & Regulations</a></li>
+                    <li><a href="#">Faculties</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <div class="footer-copy">
+            © Copyright 2025. All right reserved
+        </div>
+    </div>
+</footer>
+</body>
+</html>
