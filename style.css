@@ -1,3 +1,7 @@
+    html, body {
+        overflow-x: hidden; /* prevent unwanted horizontal scrollbars while preserving layout */
+    }
+
     body { 
         margin: 0; 
         font-family: 'Segoe UI', Arial, sans-serif; 
@@ -981,19 +985,43 @@
             }
         }
 /* --- FAQ / Queries Section  --- */
-         .faq-section {
-                min-height: 50vh;
-                background: #f6fcfa;
-                padding: 32px 0 36px 0;
-                text-align: center;
-            }
-            .faq-section h2 {
-                font-size: 2.6rem;
-                color: #23443a;
-                font-weight: 800;
-                margin-bottom: 28px;
-                font-family: 'Segoe UI', Arial, sans-serif;
-            }
+        .faq-section-index {
+            min-height: 50vh;
+            background: #f6fcfa;
+            padding: 32px 4vw 36px 0; /* keep image column flush */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px; /* reduced gap between columns */
+        }
+        .faq-section-index > .faq-images {
+            flex: 1 1 48%; /* keep image column size */
+            display: flex;
+            justify-content: flex-start; /* keep image in same spot */
+            align-items: center; /* center vertically with the FAQ content */
+        }
+        .faq-section-index > .faq-images img {
+            margin-left: 200px; /* keep image at the same horizontal spot */
+            max-width: 760px;
+            width: auto; /* natural aspect */
+            max-height: 700px; /* increased height for a taller image */
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+            object-fit: cover;
+        }
+        .faq-section-index .faq-content {
+            flex: 1 1 46%;
+            text-align: left;
+            margin-left: -540px; /* pull content more left to reduce gap while image stays in place */
+        }
+        .faq-section-index h2 {
+            font-size: 2.6rem;
+            color: #23443a;
+            font-weight: 800;
+            margin-bottom: 28px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
             .faq-grid {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
@@ -1081,7 +1109,7 @@
             background-color: #295655;
             color: #fff;
             font-weight: bold;
-            font-size: 1.6rem;
+            font-size: 2.8rem;
             padding: 18px 32px;
             border: none;
             border-radius: 6px;
@@ -1983,12 +2011,15 @@
     }
 /* --- Curriculum Overview Section Styles --- */
         .curriculum-overview-section {
-            margin: 48px auto 0 auto;
-            max-width: 1200px;
+            margin: 48px 0 0 0; /* remove automatic centering so it can go full width */
+            max-width: none;   /* allow full width */
+            width: 100%;       /* span full width */
+            padding-left: 0;   /* keep left edge flush with page */
+            padding-right: 180px; /* add right gutter so cards don't touch right edge */
             text-align: center;
         }
         .curriculum-overview-title {
-            font-size: 2rem;
+            font-size: 3.5rem;
             color: #23443a;
             font-weight: 700;
             margin-bottom: 18px;
@@ -2008,9 +2039,11 @@
         .curriculum-overview-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 36px 32px;
-            margin: 36px 0 0 0;
-            justify-items: center;
+            gap: 80px 80px;
+            margin: 36px 0 0 0; /* remove centering margin so grid starts at page left */
+            max-width: none; /* allow full width */
+            padding: 0; /* remove side padding so cards sit close to page edge */
+            justify-items: stretch; /* let cards fill their columns */
         }
         .curriculum-overview-card {
             background: #fff;
@@ -2018,8 +2051,11 @@
             border-radius: 12px;
             box-shadow: 0 2px 12px 0 rgba(0,0,0,0.04);
             padding: 32px 28px 28px 28px;
-            min-width: 320px;
-            max-width: 420px;
+            width: 100%;
+            margin-left: 80px;
+            margin-right: 60px; /* fill grid column to eliminate page gutters */
+            min-width: 0; /* allow flexible shrinking */
+            max-width: none; /* let grid control layout */
             text-align: left;
             position: relative;
             z-index: 1;
@@ -2034,13 +2070,13 @@
         }
         .curriculum-overview-card h3 {
             color: #23443a;
-            font-size: 1.25rem;
+            font-size:3.6rem;
             font-weight: 700;
             margin-bottom: 10px;
             margin-top: 0;
         }
         .curriculum-overview-focus {
-            font-size: 1.05rem;
+            font-size: 1.5rem;
             color: #23443a;
             margin-bottom: 14px;
             display: flex;
@@ -2064,7 +2100,7 @@
             margin: 0;
         }
         .curriculum-overview-card ul li {
-            font-size: 1.01rem;
+            font-size: 1.5rem;
             color: #2a4d4d;
             margin-bottom: 10px;
             padding-left: 28px;
@@ -2107,14 +2143,15 @@
 /* --- Curriculum Tabs & Subjects Section Styles --- */
         .curriculum-tabs-section {
             margin: 48px auto 0 auto;
-            max-width: 1100px;
+            max-width: 3000px;
             text-align: center;
         }
         .curriculum-tabs {
             display: flex;
-            gap: 18px;
+            gap: 40px;
             justify-content: center;
             margin-bottom: 38px;
+            max-width: 100%;
             flex-wrap: wrap;
         }
         .curriculum-tab {
@@ -2122,8 +2159,8 @@
             color: #23443a;
             border: none;
             border-radius: 8px;
-            padding: 14px 28px;
-            font-size: 1.08rem;
+            padding: 35px 55px;
+            font-size: 2.2rem;
             font-weight: 500;
             cursor: pointer;
             transition: background 0.2s, color 0.2s;
@@ -2146,32 +2183,34 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 48px 64px;
-            margin: 32px 0 0 0;
+            margin: 32px auto 0; /* center and add top spacing */
+            max-width: 1100px; /* constrain overall grid width */
+            padding: 0 16px; /* keep breathing room on small screens */
         }
         .curriculum-subject {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
-            min-width: 180px;
-            max-width: 220px;
+            min-width: 270px; /* increased card footprint */
+            max-width: 350px; /* allow wider cards */
             margin-bottom: 18px;
         }
         .curriculum-subject img {
-            width: 100px;
-            height: 100px;
+            width: 180px; /* larger subject icon */
+            height: 180px;
             object-fit: contain;
             border-radius: 50%;
             background: #fff;
             box-shadow: 0 2px 8px 0 rgba(0,0,0,0.06);
             margin-bottom: 16px;
-            border: 4px solid #eaf7f5;
+            border: 6px solid #eaf7f5;
         }
         .curriculum-subject-title {
-            font-size: 1.18rem;
+            font-size: 1.4rem; /* larger label */
             color: #23443a;
             font-weight: 700;
-            margin-top: 0;
+            margin-top: 6px;
         }
         .curriculum-tabs-decor {
             display: flex;
@@ -2206,12 +2245,12 @@
                 gap: 24px 12px;
             }
             .curriculum-subject {
-                min-width: 120px;
+                min-width: 140px; /* slightly larger min on mobile */
                 max-width: 100%;
             }
             .curriculum-subject img {
-                width: 60px;
-                height: 60px;
+                width: 80px;
+                height: 80px;
             }
         }
 /* --- Curriculum Hero Section Styles --- */
@@ -2396,11 +2435,12 @@
         }
 /* --- Board Results & Top Performers Section Styles --- */
         .board-results-section {
-            width:99%;
+            margin-top: 100px;
+            width:100vw;
             position: relative;
-            background-image: url('banner.png'); /* ensure the banner is applied reliably */
+            background-image: url('images/banner.png'); /* ensure the banner is applied reliably */
             background-color: transparent; /* let the banner image show fully */
-            min-height: 300px; /* larger so banner headline is clearly visible */
+            min-height: 639px; /* larger so banner headline is clearly visible */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -2444,7 +2484,7 @@
             text-align: center;
         }
         .top-performers-title {
-            font-size: 1.7rem;
+            font-size: 4rem;
             color: #23443a;
             font-weight: 700;
             margin-bottom: 18px;
@@ -4855,7 +4895,7 @@
             width: 100%;
             height: 100%;
             max-width: 340px;
-            max-height: 500px;
+            max-height: 800px;
             border-radius: 12px;
             box-shadow: 0 2px 12px rgba(60,80,80,0.08);
         }
@@ -4865,16 +4905,17 @@
             z-index: 1;
         }
         .faq-title {
-            font-size: 2.7rem;
+            font-size: 3.6rem;
             font-weight: 800;
             color: #222;
-            margin-bottom: 18px;
+            margin-bottom: 10px;
         }
         .faq-list {
             background: #e6eaec; /* slightly darker background */
-            height: 45vh;
+            height: auto; /* allow the panel to size to content */
+            max-height: none;
             border-radius: 12px;
-            padding: 18px 25px 12px 18px;
+            padding: 14px 20px; /* slightly reduced padding */
             box-shadow: 0 2px 8px rgba(60,80,80,0.03);
         }
         .faq-list .faq-q {
@@ -4884,24 +4925,24 @@
             margin-bottom: 24px;
             text-align: left;
             margin-left: 50px;
-            font-size: 1.5rem;
+            font-size: 2.5rem;
         }
         .faq-list .faq-a {
             color: #222;
-            font-size: 1.3rem;
+            font-size: 2rem;
             text-align: justify;
             margin-left: 50px;
         }
         .faq-list .faq-other {
             border-top: 1px solid #dbeae3;
             color: #23443a;
-            font-size: 1.5rem;
+            font-size: 2rem;
             font-weight: 700;
             cursor: pointer;
             display: flex;
             text-align: left;
             margin-left: 50px;
-            margin-top: 20px;
+            margin-top: 40px;
             justify-content: space-between;
         }
         .faq-list .faq-other:not(:last-child) {
@@ -4914,14 +4955,22 @@
             margin-left: 8px;
         }
         @media (max-width: 900px) {
-            .faq-section {
+            .faq-section-index {
                 flex-direction: column;
                 gap: 24px;
-                padding: 24px 0 0 0;
+                padding: 24px 4vw 0 4vw;
+                align-items: center;
             }
-            .faq-images img, .faq-images .img-overlay {
+            .faq-section-index .faq-images img, .faq-section-index .faq-images .img-overlay {
                 max-width: 98vw;
                 width: 98vw;
+            }
+            .faq-section-index .faq-content {
+                width: 100%;
+                margin-left: 0; /* reset negative margin on small screens */
+            }
+            .faq-list {
+                height: auto;
             }
             .login-row {
                 flex-direction: column;
