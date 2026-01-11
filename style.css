@@ -535,17 +535,15 @@
     .dm-signoff::after {
         content: "";
         position: absolute;
+        right: 320px;
         /* keep same horizontal anchor, increase size */
-        left: calc((100% - 900px)/2 + 94px );
-        top: calc(100% + 42px); /* pushed slightly further down for the larger circle */
+        top: 350px; /* pushed slightly further down for the larger circle */
         width: 150px;
         height: 150px;
         margin-top: 20%;
         background: #9fbfc7;
         border-radius: 50%;
         clip-path: inset(0 0 50% 0); /* curved side facing up */
-        box-shadow: 0 2px 6px rgba(0,0,0,0.12);
-        z-index: 2;
     }
 
     @media (max-width: 700px) {
@@ -871,28 +869,42 @@
         }
 /*===== EVENTS SECTION ===== */
         .events-row {
-            display: flex;
+            display: grid;
             background: #dbecdf;
-            justify-content: flex-start;
-            align-items: flex-start;
-            gap: 32px;
-            margin: 40px auto 50px 500px;
-            /* max-height: 80vh;*/
-            /* max-width: 1100px;  */
-            z-index: 1;
+            
+            /* justify-content: flex-start;
+            align-items: flex-start; */
+            /* margin-left: 200px; */
+            gap: 10px;
             position: relative;
+            grid-template-columns: .5fr .5fr 1fr;
         }
-        .calendar-box, .events-box {
+        .calendar-box {
             background: #8ea6a0;
             border-radius: 16px;
-            margin-right: 20px;
+            /* margin-right: 10px; */
             margin-top: 30px;
+            margin-left: 50px;
             padding: 24px 24px 18px 24px;
-            min-width: 400px;
+            min-width: 500px;
             min-height: 450px;
             margin-bottom: 20px;
             box-sizing: border-box;
             color: #fff;
+        }
+        .events-box {
+             background: #8ea6a0;
+            border-radius: 16px;
+            /* margin-right: 10px; */
+            margin-top: 30px;
+            margin-left: 100px;
+            padding: 24px 24px 18px 24px;
+            min-width: 500px;
+            min-height: 450px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            color: #fff;
+            margin-right: 400px;
         }
         .calendar-title {
             font-size: 1.1rem;
@@ -939,9 +951,11 @@
             background: #e6f0ed;
             border-radius: 16px;
             overflow: hidden;
-            margin-top: 10px;
-            min-width: 500px;
-            min-height: 500px;
+            /* margin-top: 10px;
+            margin-bottom: 10px; */
+            margin-right: 10px;
+            /* min-width: 600px;
+            min-height: 500px; */
             box-sizing: border-box;
         }
         .map-iframe {
@@ -967,7 +981,7 @@
             }
         }
 /* --- FAQ / Queries Section  --- */
-            .faq-section {
+         .faq-section {
                 min-height: 50vh;
                 background: #f6fcfa;
                 padding: 32px 0 36px 0;
@@ -1067,7 +1081,7 @@
             background-color: #295655;
             color: #fff;
             font-weight: bold;
-            font-size: 1.1rem;
+            font-size: 1.6rem;
             padding: 18px 32px;
             border: none;
             border-radius: 6px;
@@ -2201,7 +2215,7 @@
             }
         }
 /* --- Curriculum Hero Section Styles --- */
-        .curriculum-hero {
+     .curriculum-hero {
             display: flex;
             align-items: flex-start;
             justify-content: space-between;
@@ -2213,11 +2227,12 @@
         }
         .curriculum-hero-left {
             flex: 1.2;
+            max-width:3000px ;
             padding: 40px 0 0 7vw;
             z-index: 2;
         }
         .curriculum-hero-left h1 {
-            font-size: 2.5rem;
+            font-size: 8rem;
             color: #23443a;
             font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
             font-weight: bold;
@@ -2225,10 +2240,10 @@
             line-height: 1.2;
         }
         .curriculum-hero-desc {
-            font-size: 1.1rem;
+            font-size: 2rem;
             color: #23443a;
             margin-bottom: 32px;
-            max-width: 480px;
+            max-width: 740px;
             line-height: 1.6;
         }
         .curriculum-hero-btns {
@@ -2241,7 +2256,7 @@
             color: #fff;
             padding: 14px 28px;
             border-radius: 8px;
-            font-size: 1.08rem;
+            font-size: 1.8rem;
             font-weight: 500;
             text-decoration: none;
             border: none;
@@ -2264,19 +2279,22 @@
         .curriculum-hero-right {
             flex: 1.1;
             display: flex;
-            flex-direction: column;
-            align-items: flex-end;
+            flex-direction: row;
+            align-items: center;
             gap: 18px;
-            padding-right: 7vw;
+            padding-right: 2vw;
             z-index: 2;
+            justify-content: flex-end;
         }
         .curriculum-hero-img-main {
             position: relative;
-            width: 340px;
-            height: 260px;
+            width: 440px;
+            height: 500px;
             border-radius: 18px;
             overflow: visible;
             margin-bottom: 18px;
+            transform: translateY(280px);
+            transition: transform 0.25s ease;
         }
         .curriculum-hero-img-main img {
             width: 100%;
@@ -2288,14 +2306,15 @@
         }
         .curriculum-hero-info-box {
             position: absolute;
-            right: -38px;
-            top: 28px;
-            background: #eaf7f5;
+            right: -208px;
+            top: 170px;
+            background: #1390cf;
             border-radius: 12px;
             box-shadow: 0 2px 8px rgba(60,80,80,0.04);
             padding: 18px 28px;
-            min-width: 210px;
+            min-width: 240px;
             z-index: 3;
+            transition: right 0.25s ease, transform 0.25s ease;
         }
         .curriculum-hero-info-box ul {
             list-style: none;
@@ -2327,11 +2346,11 @@
             margin-right: 6px;
         }
         .curriculum-hero-img-side {
-            width: 120px;
-            height: 120px;
+            width: 440px;
+            height: 500px;
             border-radius: 18px;
             overflow: hidden;
-            margin-top: 12px;
+            margin: 12px 0 0 18px;
         }
         .curriculum-hero-img-side img {
             width: 100%;
@@ -2352,14 +2371,27 @@
             .curriculum-hero-left, .curriculum-hero-right {
                 padding: 0 4vw;
             }
+            .curriculum-hero-right {
+                flex-direction: column;
+                align-items: flex-end;
+            }
             .curriculum-hero-img-main {
                 width: 90vw;
                 max-width: 340px;
                 height: 200px;
+                transform: translateY(0);
             }
             .curriculum-hero-img-side {
                 width: 80px;
                 height: 80px;
+            }
+            .curriculum-hero-info-box {
+                position: static;
+                right: auto;
+                top: auto;
+                margin-top: 12px;
+                min-width: auto;
+                align-self: flex-end;
             }
         }
 /* --- Board Results & Top Performers Section Styles --- */
@@ -3322,18 +3354,18 @@
             color: #fff;
             text-align: center;
             width: 100%;
-            max-width: 900px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 60px 20px 40px 20px;
         }
         .facilities-hero-content h1 {
-            font-size: 2.8rem;
+            font-size: 3rem;
             font-weight: 700;
             margin-bottom: 18px;
-            letter-spacing: 0.5px;
+            letter-spacing: 1.8px;
         }
         .facilities-hero-content p {
-            font-size: 1.2rem;
+            font-size: 1.8rem;
             font-style: italic;
             margin-bottom: 32px;
             color: #e0e0e0;
@@ -3342,7 +3374,7 @@
             display: inline-block;
             background: rgba(60,60,60,0.6);
             color: #fff;
-            font-size: 1.1rem;
+            font-size: 1.7rem;
             padding: 12px 36px;
             border-radius: 6px;
             border: none;
@@ -3699,7 +3731,6 @@
             justify-content: center;
             align-items: center;
             background: #fff;
-            border-top: 1px solid #e6f0ee;
             padding: 0 0 0 0;
             font-size: 1.05rem;
         }
@@ -4783,7 +4814,7 @@
                 padding: 12px 16px;
             }
         }
-/*Freqwuently Asked Questions Section ===== */
+/*Frequently Asked Questions Section ===== */
         .faq-section {
             max-width: 1100px;
             margin: 0 auto;
@@ -4796,13 +4827,12 @@
         .faq-section::before {
             content: '';
             position: absolute;
-            left: -80px;
-            top: 30px;
+            top: 600px;
+            right: 1740px;
             width: 120px;
             height: 120px;
-            background: #8eb3b7;
+            background: #2e747c;
             border-radius: 50%;
-            z-index: 0;
             opacity: 0.7;
         }
         .faq-section::after {
@@ -4835,20 +4865,20 @@
             z-index: 1;
         }
         .faq-title {
-            font-size: 1.5rem;
-            font-weight: 600;
+            font-size: 2.7rem;
+            font-weight: 800;
             color: #222;
             margin-bottom: 18px;
         }
         .faq-list {
             background: #e6eaec; /* slightly darker background */
-            height: 50vh;
+            height: 45vh;
             border-radius: 12px;
             padding: 18px 25px 12px 18px;
             box-shadow: 0 2px 8px rgba(60,80,80,0.03);
         }
         .faq-list .faq-q {
-            font-weight: 600;
+            font-weight: 700;
             color: #23443a;
             margin-top: 20px;
             margin-bottom: 24px;
@@ -4858,8 +4888,7 @@
         }
         .faq-list .faq-a {
             color: #222;
-            font-size: 1.2rem;
-            margin-bottom: 18px;
+            font-size: 1.3rem;
             text-align: justify;
             margin-left: 50px;
         }
@@ -4867,19 +4896,20 @@
             border-top: 1px solid #dbeae3;
             color: #23443a;
             font-size: 1.5rem;
+            font-weight: 700;
             cursor: pointer;
             display: flex;
             text-align: left;
             margin-left: 50px;
-            margin-top: 50px;
+            margin-top: 20px;
             justify-content: space-between;
         }
         .faq-list .faq-other:not(:last-child) {
             margin-bottom: 8px;
         }
         .faq-list .faq-other span {
-            font-size: 1.7rem;
-            font-weight: 600;
+            font-size: 1.9rem;
+            font-weight: 800;
             color: #7ba6a3;
             margin-left: 8px;
         }
