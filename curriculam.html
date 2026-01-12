@@ -79,7 +79,7 @@
                     <div class="curriculum-subject-title">Sports & Physical Education</div>
                 </div>
                 <div class="curriculum-subject">
-                    <img src="dance.png" alt="Music & Dance">
+                    <img src="images/dance.png" alt="Music & Dance">
                     <div class="curriculum-subject-title">Music & Dance</div>
                 </div>
                 <div class="curriculum-subject">
@@ -166,17 +166,17 @@
                         `;
                     } else if (tab === 'digital') {
                         grid.innerHTML = `
-                            <div class=\"curriculum-subject\" style=\"width:100%;display:flex;align-items:center;justify-content:flex-start;gap:24px;margin-bottom:32px;\">
-                                    <img src=\"images/smart.png\" alt=\"Smart Classrooms\" style=\"width:80px;height:80px;object-fit:contain;border-radius:50%;background:#fff;box-shadow:0 2px 8px 0 rgba(0,0,0,0.06);\">
-                                    <div class=\"curriculum-subject-title\" style=\"font-size:1.25rem;font-weight:500;\">Smart Classrooms with interactive technology</div>
+                            <div class="curriculum-subject">
+                                    <img src="images/smart.png" alt="Smart Classrooms">
+                                    divSmart Classrooms with interactive technology</div>
                             </div>
-                            <div class=\"curriculum-subject\" style=\"width:100%;display:flex;align-items:center;justify-content:center;gap:24px;margin-bottom:32px;\">
-                                    <div class=\"curriculum-subject-title\" style=\"font-size:1.25rem;font-weight:500;\">E-learning resources for self-paced study</div>
-                                    <img src=\"images/e-learning.png\" alt=\"E-learning\" style=\"width:80px;height:80px;object-fit:contain;border-radius:50%;background:#fff;box-shadow:0 2px 8px 0 rgba(0,0,0,0.06);\">
+                            <div class=\"curriculum-subject\" ">
+                                    <img src=\"images/e-learning.png\" alt=\"E-learning\">
+                                    <div class=\"curriculum-subject-title\"">E-learning resources for self-paced study</div>
                             </div>
-                            <div class=\"curriculum-subject\" style=\"width:100%;display:flex;align-items:center;justify-content:flex-start;gap:24px;\">
-                                    <img src=\"images/assesments.png\" alt=\"Assessments\" style=\"width:80px;height:80px;object-fit:contain;border-radius:50%;background:#fff;box-shadow:0 2px 8px 0 rgba(0,0,0,0.06);\">
-                                    <div class=\"curriculum-subject-title\" style=\"font-size:1.25rem;font-weight:500;\">Regular assessments and progress tracking</div>
+                            <div class=\"curriculum-subject\">
+                                    <img src=\"images/assesments.png\" alt=\"Assessments\">
+                                    <div class=\"curriculum-subject-title\" \">Regular assessments and progress tracking</div>
                             </div>
                         `;
                     }
@@ -198,7 +198,9 @@
         <h2 class="curriculum-overview-title">Curriculum <span class="curriculum-overview-underline"></span></h2>
         <div class="curriculum-overview-grid">
             <div class="curriculum-overview-card">
-                <div class="curriculum-overview-bird">🪶</div>
+                 <div class="pin-icon">
+                    <img src="images/pin.png" alt="pin Icon" style="height: 35px;">
+                </div> 
                 <h3>Primary (Classes I–V)</h3>
                 <div class="curriculum-overview-focus"><span class="focus-dot focus-dot-blue"></span> <b>Focus:</b> Building strong foundations through joyful learning.</div>
                 <ul>
@@ -211,7 +213,9 @@
                 </ul>
             </div>
             <div class="curriculum-overview-card">
-                <div class="curriculum-overview-bird">🪶</div>
+                <div class="pin-icon">
+                    <img src="images/pin.png" alt="pin Icon" style="height: 35px;">
+                </div>
                 <h3>Middle (Classes VI–VIII)</h3>
                 <div class="curriculum-overview-focus"><span class="focus-dot focus-dot-green"></span> <b>Focus:</b> Conceptual clarity & curiosity-driven learning.</div>
                 <ul>
@@ -224,7 +228,9 @@
                 </ul>
             </div>
             <div class="curriculum-overview-card">
-                <div class="curriculum-overview-bird">🪶</div>
+                <div class="pin-icon">
+                    <img src="images/pin.png" alt="pin Icon" style="height: 35px;">
+                </div>
                 <h3>Secondary (Classes IX–X)</h3>
                 <div class="curriculum-overview-focus"><span class="focus-dot focus-dot-orange"></span> <b>Focus:</b> Academic depth, analytical skills & exam readiness.</div>
                 <ul>
@@ -237,7 +243,9 @@
                 </ul>
             </div>
             <div class="curriculum-overview-card">
-                <div class="curriculum-overview-bird">🪶</div>
+                <div class="pin-icon">
+                    <img src="images/pin.png" alt="pin Icon" style="height: 35px;">
+                </div>
                 <h3>Senior Secondary (XI–XII)</h3>
                 <div class="curriculum-overview-focus"><span class="focus-dot focus-dot-yellow"></span> <b>Focus:</b> Specialization & career preparation.</div>
                 <div class="curriculum-overview-streams"><b>Streams Offered:</b></div>
@@ -255,23 +263,13 @@
 
     <section class="top-performers-section">
         <h2 class="top-performers-title">Our Top Performers <span class="top-performers-underline"></span></h2>
-        <div class="top-performers-grid">
-            <div class="top-performer-card">
-                <div class="top-performer-text">
-                    The guidance from teachers and access to modern labs helped me score 97% in CBSE Boards. The balanced approach of academics and co-curriculars shaped my personality and confidence.
-                    <div class="top-performer-name">Ananya Sharma</div>
-                    <div class="top-performer-class">Class XII (Science)</div>
-                </div>
-                <div class="top-performer-img-box">
-                    <img src="https://randomuser.me/api/portraits/men/31.jpg" alt="Ananya Sharma">
-                </div>
-            </div>
             <div class="top-performer-card">
                 <div class="top-performer-img-box">
                     <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rohan Verma">
                 </div>
                 <div class="top-performer-text">
-                    Scoring 96% was a result of the school's well-structured assessments and regular doubt sessions. The smart classrooms and e-learning also made learning enjoyable.
+                     The journey to a 97% score in my CBSE exams has been a long and demanding one, but every late night and early morning has led to this moment.
+                    First, my deepest gratitude goes out to my parents. Your unwavering support, sacrifices, and belief in me were the foundation of my success. Thank you for creating an environment where I could focus on my studies and for always pushing me to be my best.
                     <div class="top-performer-name">Rohan Verma</div>
                     <div class="top-performer-class">Class X (Topper)</div>
                 </div>
