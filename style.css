@@ -279,7 +279,7 @@
     .academic-facilities-title, .sports-facilities-title, .wellbeing-title, .campus-glance-title, .faculty-title, .parenting-app-title, .curriculum-overview-title{
         font-size: 1.1rem;
     }
-    .academic-facility-card, .sports-facility-card, .wellbeing-cards, .curriculum-overview-card {
+    .academic-facility-card, .sports-facility-card, .curriculum-overview-card {
         font-size: 0.95rem;
         padding: 10px 6px;
     }
@@ -2380,7 +2380,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 75px;
+            gap: 65px;
             max-width: 2200px;
             margin: 0 auto;
             padding: 32px 16px 0 16px;
@@ -2417,7 +2417,7 @@
             text-align: center;
         }
         .academic-facility-card p {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             color: #3a4a5a;
             text-align: center;
             margin: 0 12px;
@@ -2473,11 +2473,9 @@
         .sports-facility-card img {
             width: 100%;
             height: 100%;
-            min-height: 140px;
             object-fit: cover;
             display: block;
             filter: brightness(0.7);
-            transition: filter 0.2s;
         }
         .sports-facility-card:hover img {
             filter: brightness(0.55);
@@ -2538,7 +2536,7 @@
             flex-direction: column;
             gap: 32px;
             flex: 1 1 0;
-            min-width: 320px;
+            min-width: 360px;
             z-index: 2;
         }
         .wellbeing-cards-left {
@@ -2555,8 +2553,7 @@
             align-items: center;
             gap: 18px;
             padding: 22px 28px 22px 20px;
-            min-width: 270px;
-            max-width: 340px;
+            max-width: 380px;
             min-height: 90px;
             border: none;
         }
@@ -2566,13 +2563,14 @@
             flex-shrink: 0;
         }
         .wellbeing-card-title {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             font-weight: 600;
             color: #234;
             margin-bottom: 2px;
         }
         .wellbeing-card-desc {
-            font-size: 0.98rem;
+            font-size: 1.1rem;
+            font-weight: 620;
             color: #4a5a6a;
         }
         .wellbeing-center-img {
@@ -2583,8 +2581,8 @@
             justify-content: center;
         }
         .wellbeing-center-img img {
-            width: 460px;
-            height: 570px;
+            width: 390px;
+            height: 600px;
             object-fit: cover;
             border-radius: 24px;
             box-shadow: 0 4px 32px rgba(63,166,247,0.10);
@@ -2648,7 +2646,7 @@
             align-items: flex-start;
             justify-content: space-between;
             gap: 32px;
-            max-width: 1300px;
+            max-width: 70%;
             margin: 0 auto;
             padding: 0 16px;
         }
@@ -2657,7 +2655,7 @@
             min-width: 360px;
         }
         .tools-title {
-            font-size: 2.5rem;
+            font-size:3.5rem;
             font-weight: 700;
             color: #222;
             margin-bottom: 52px;
@@ -2667,11 +2665,12 @@
             font-weight: 700;
         }
         .tools-desc {
-            font-size: 1.5rem;
-            font-weight: 400;
+            font-size: 2rem;
+            font-weight: 620;
+            line-height: 1.4;
             color: #444;
             margin-bottom: 0;
-            max-width: 600px;
+            max-width: 800px;
         }
         .tools-img-teacher {
             position: relative;
@@ -2679,9 +2678,8 @@
             margin: 0 auto;
         }
         .tools-img-teacher img {
-            height: 350px;
-            width: 250px;
-            border-radius: 0 0 80px 80px/0 0 100px 100px;
+            height: 480px;
+            width: 380px;
             z-index: 2;
             position: relative;
         }
@@ -2704,7 +2702,7 @@
         .tools-img-dot3 { width: 8px; height: 8px; top: 80px; left: 160px; }
 
         .tools-row-bottom {
-            margin-top: 48px;
+            margin-top: 55px;
             align-items: flex-start;
         }
         .tools-quiz-card {
@@ -2712,7 +2710,6 @@
               border-radius: 18px;
               box-shadow: 0 2px 16px rgba(63,166,247,0.10);
               padding: 24px 18px 18px 18px;
-              min-width: 300px;
               height:530px;
               max-width: 340px;
               position: relative;
@@ -2771,7 +2768,7 @@
         .tools-quiz-success {
                 background: #eaf6f3;
                 color: #2e8b7a;
-                font-size: 0.98rem;
+                font-size: 1.1rem;
                 border-radius: 8px;
                 padding: 8px 14px;
                 display: flex;
@@ -2798,8 +2795,8 @@
             margin-left: 32px;
         }
         .tools-assess-title {
-            font-size: 3rem;
-            font-weight: 500;
+            font-size: 4rem;
+            font-weight: 700;
             color: #222;
             margin-bottom: 10px;
         }
@@ -2808,8 +2805,8 @@
             font-weight: 700;
         }
         .tools-assess-desc {
-            font-size: 1.5rem;
-            font-weight: 500;
+            font-size: 1.9rem;
+            font-weight: 600;
             color: #444;
             margin-bottom: 0;
         }
@@ -2930,57 +2927,52 @@
         .faculty-nav-btn:hover {
             background: #bfe3f7;
         }
-
-
 /* --- Campus at a Glance Section Styles --- */
         .campus-glance-section {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 36px;
+            /* gap: 60px; */
             background: #fff;
             padding: 40px 0 30px 0;
-            height: 600px;
-            max-width: 1200px;
-            margin: 0 auto;
+            height: 500px;
+            max-width: 100%;
         }
         .campus-glance-content {
             flex: 1 1 0;
             position: relative;
-            min-width: 320px;
-            max-width: 480px;
+            max-width: 1000px;
+            /* margin-right: 70px; */
         }
         .campus-glance-dot {
             position: absolute;
             left: -18px;
-            top: 15px;
-            width: 50px;
-            height: 50px;
+            top: 20px;
+            width: 80px;
+            height: 80px;
             background: #6bb7a7;
             border-radius: 50%;
             z-index: 1;
         }
         .campus-glance-title {
-            font-size: 1.8rem;
+            font-size: 3.4rem;
             font-weight: 500;
             color: #222;
-            margin-bottom: 18px;
+            /* margin-bottom: 18px; */
             position: relative;
             z-index: 2;
         }
         .campus-glance-title span {
             color: #2e8b7a;
             font-weight: 600;
-            font-size: 1.6rem;
+            font-size: 2.9rem;
             letter-spacing: 0.5px;
         }
         .campus-glance-list {
             list-style: disc inside;
-            font-size: 1.5rem;
+            font-size: 2.4rem;
+            font-weight: 480;
             color: #222;
-            margin-left: 0;
-            padding-left: 0;
-            margin-top: 10px;
         }
         .campus-glance-list li {
             margin-bottom: 10px;
@@ -2988,16 +2980,17 @@
         .campus-glance-imgbox {
             position: relative;
             flex: 1 1 0;
-            min-width: 260px;
-            max-width: 370px;
+            /* min-width: 260px; */
+            max-width: 760px;
             display: flex;
             align-items: center;
             justify-content: center;
+            /* margin-left: 100px; */
         }
         .campus-glance-imgbox img {
-            width: 100%;
-            max-width: 400px;
-            height: 400px;
+            /* width: 100%; */
+            max-width: 750px;
+            height: 500px;
             object-fit: cover;
             border-radius: 18px;
             z-index: 2;
@@ -3048,10 +3041,9 @@
                 gap: 18px;
                 padding: 24px 0 18px 0;
             }
-            .campus-glance-content, .campus-glance-imgbox {
-                min-width: 0;
+            /* .campus-glance-content, .campus-glance-imgbox {
                 max-width: 95vw;
-            }
+            } */
             .campus-glance-imgbox img {
                 max-width: 95vw;
                 height: 160px;
@@ -3093,13 +3085,11 @@
             z-index: 3;
             color: #fff;
             text-align: center;
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
+            max-width: 1500px;
             padding: 60px 20px 40px 20px;
         }
         .facilities-hero-content h1 {
-            font-size: 3rem;
+            font-size: 4.1rem;
             font-weight: 700;
             margin-bottom: 18px;
             letter-spacing: 1.8px;
@@ -3117,11 +3107,11 @@
             font-size: 1.7rem;
             padding: 12px 36px;
             border-radius: 6px;
-            border: none;
+            /* border: none; */
             text-decoration: none;
             font-weight: 500;
-            transition: background 0.2s, color 0.2s;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            /* transition: background 0.2s, color 0.2s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08); */
         }
         .facilities-btn:hover {
             background: #3fa6f7;
@@ -4998,7 +4988,7 @@
         .contact-bg-text {
             position: absolute;
             color: #e6f0ee;
-            top: -80px;
+            top: -85px;
             font-size: 18rem;
             font-weight: 800;
             left: 3%;
@@ -5018,7 +5008,7 @@
         .contact-left {
             flex: 1.6;
             min-width: 260px;
-            margin-top: 100px;
+            margin-top: 130px;
         }
         .contact-left h2 {
             font-size: 4rem;
@@ -5045,7 +5035,7 @@
             display: flex;
             flex-direction: column;
             gap: 18px;
-            margin-top: 20px;
+            margin-top: 70px;
         }
         .form-row {
             display: flex;
