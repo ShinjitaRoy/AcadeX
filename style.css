@@ -303,13 +303,11 @@
         height: auto;
     }
 }
-
         .custom-footer a {
         color: #fff;
         font-weight: 700;
         font-size: 1.5rem;
         text-decoration: none;
-        transition: color 0.2s;
         font-family: 'Segoe UI', Arial, sans-serif;
         }
 
@@ -742,149 +740,117 @@
                 max-width: 420px;
             }
         }
-/* --- FAQ / Queries Section  --- */
-/* ================= FAQ SECTION (INDEX) ================= */
+/* ================= FAQ SECTION ================= */
+        .faq-section-index {
+            min-height: 60vh;
+            background: #f6fcfa;
+            padding: 40px 6vw 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .faq-images-index {
+            flex: 0 0 45%;
+            display: flex;
+            justify-content: center;
+        }
+        .faq-images-index img {
+            max-width: 770px;
+            max-height:900px;
+            width: 100%;
+            border-radius: 12px;
+        }
+        .faq-content-index {
+            flex: 0 0 55%;
+        }
+        .faq-title-index {
+            font-size: 3.2rem;
+            font-weight: 800;
+            color: #23443a;
+            margin-bottom: 24px;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+        .faq-list-index {
+            background: #e6eaec;
+            border-radius: 14px;
+            padding: 22px 36px;
+            max-width: 880px;
+        }
+        .faq-q-index {
+            font-size: 2.1rem;
+            font-weight: 700;
+            color: #23443a;
+            margin-bottom: 18px;
+        }
+        .faq-a-index {
+            font-size: 1.7rem;
+            line-height: 1.7;
+            color: #222;
+            text-align: justify;
+            margin-bottom: 32px;
+        }
+        .faq-other-index {
+            border-top: 1px solid #dbeae3;
+            padding: 10px 0;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #23443a;
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+        }
 
-.faq-section-index {
-    background: #f6fcfa;
-    padding: 80px 0 60px;
-}
+        .faq-other-index span {
+            font-size: 2.1rem;
+            font-weight: 800;
+            color: #3e5251;
+        }
 
-.faq-wrapper-index {
-    max-width: 1200px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
-}
+        .login-buttons-index {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            margin: 40px 0 60px;
+        }
 
-/* LEFT IMAGE */
-.faq-images-index img {
-    width: 100%;
-    max-width: 520px;
-    border-radius: 14px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-}
+        .login-btn-index {
+            background-color: #1c3e3e;
+            color: #fff;
+            font-weight: 600;
+            font-size: 1.9rem;
+            padding: 24px 48px;
+            border-radius: 7px;
+            border: none;
+        }
 
-/* RIGHT CONTENT */
-.faq-content-index h2 {
-    font-size: 2.6rem;
-    font-weight: 800;
-    color: #23443a;
-    margin-bottom: 26px;
-}
-
-/* ===== MAIN FAQ BOX ===== */
-.faq-box-index {
-    background: #f1f3f3;
-    border-radius: 14px;
-    padding: 20px 22px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
-}
-
-/* EACH QUESTION BLOCK */
-.faq-item-index {
-    padding: 14px 0;
-}
-
-.faq-item-index:not(:last-child) {
-    border-bottom: 1px solid #dde7e4;
-}
-
-/* QUESTION ROW */
-.faq-question-index {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1.05rem;
-    font-weight: 700;
-    color: #23443a;
-    cursor: pointer;
-}
-
-/* TOGGLE PILL */
-.faq-toggle-index {
-    background: #ffffff;
-    color: #2e747c;
-    font-size: 1.4rem;
-    font-weight: 700;
-    border-radius: 6px;
-    padding: 2px 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
-}
-
-/* ANSWER */
-.faq-answer-index {
-    margin-top: 10px;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: #23443a;
-    max-width: 95%;
-}
-
-/* COLLAPSED */
-.faq-item-index:not(.active) .faq-answer-index {
-    display: none;
-}
-
-/* ACTIVE QUESTION COLOR */
-.faq-item-index.active .faq-question-index {
-    color: #3fa6a6;
-}
+        .login-btn-index:hover {
+            background-color: #3a7d7b;
+            transform: translateY(-2px) scale(1.03);
+        }
 
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 900px) {
-    .faq-wrapper-index {
-        grid-template-columns: 1fr;
+    .faq-section-index {
+        flex-direction: column;
         gap: 40px;
+        padding: 32px 6vw 60px;
     }
 
     .faq-images-index img {
-        margin: auto;
+        max-width: 90vw;
     }
-}
-/* ================= LOGIN BUTTONS (INDEX FAQ) ================= */
 
-.login-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 32px;
-    margin: 40px auto 0;
-    padding-bottom: 40px;
-}
+    .faq-list-index {
+        max-width: 100%;
+    }
 
-.login-btn {
-    background: #1f4f4c;
-    color: #ffffff;
-    font-size: 1.6rem;
-    font-weight: 600;
-    padding: 16px 36px;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
-    transition: all 0.25s ease;
-}
-
-.login-btn:hover {
-    background: #2f6f6a;
-    transform: translateY(-3px);
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-    .login-buttons {
+    .login-buttons-index {
         flex-direction: column;
         align-items: center;
     }
-
-    .login-btn {
-        width: 260px;
-        text-align: center;
-    }
 }
+
 
 /* ===== ABOUT US HERO SECTION (custom for about.html) ===== */
         .aboutus-hero {
@@ -1190,7 +1156,6 @@
         }
         .values-grid {
             display: grid;
-            /* increase minimum column size so cards render wider on large screens */
             grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
             gap: 44px; /* keep a comfortable gap when cards grow */
             margin: 32px 0 0 0;
@@ -1208,7 +1173,6 @@
             text-align: left;
             position: relative;
             border: none;
-            transition: box-shadow 0.2s, border 0.2s, transform 0.18s ease;
         }
         .value-card h3 {
             font-size: 1.8rem; /* larger heading for better balance */
@@ -1324,7 +1288,7 @@
         border-radius: 18px;
     }
     .awards-grid {
-        width: 100vw; /* full viewport width */
+        width: 100vw; 
         margin-left: calc(50% - 50vw);
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -1339,24 +1303,21 @@
         content: "";
         position: absolute;
         inset: 0;
-        background: rgba(255,255,255,0.3); /* subtle fade */
+        background: rgba(255,255,255,0.3); 
         z-index: 0;
         border-radius: 0;
         pointer-events: none;
     }
     .award-card {
-         /* soft green card background */
-        border: 1px solid #1a6b57; /* green card boundary */
+        border: 1px solid #1a6b57; 
         border-radius: 16px;
-        padding: 12px; /* padding creates white inset for image box */
-        
+        padding: 12px; 
         min-width: 0;
         max-width: 340px;
         min-height: auto;
         text-align: center;
         position: relative;
         z-index: 1;
-        transition: transform 0.18s ease, box-shadow 0.18s ease;
     }
     .award-card:hover { transform: translateY(-6px); box-shadow: 0 12px 36px rgba(26,77,58,0.12); }
     .award-img-box {
@@ -2029,7 +1990,6 @@
             text-decoration: none;
             border: none;
             box-shadow: 0 2px 8px rgba(60,80,80,0.04);
-            transition: background 0.2s, color 0.2s;
         }
         .curriculum-btn-outline {
             background:#23443a;
@@ -2062,7 +2022,6 @@
             overflow: visible;
             margin-bottom: 18px;
             transform: translateY(280px);
-            transition: transform 0.25s ease;
         }
         .curriculum-hero-img-main img {
             width: 100%;
@@ -2081,7 +2040,6 @@
             padding: 18px 28px;
             min-width: 240px;
             z-index: 3;
-            transition: right 0.25s ease, transform 0.25s ease;
         }
         .curriculum-hero-info-box ul {
             list-style: none;
@@ -2355,7 +2313,6 @@
             flex-direction: column;
             align-items: center;
             padding: 0 0 20px 0;
-            transition: box-shadow 0.18s, transform 0.18s;
             border: 2px solid #e3f0f7;
         }
         .academic-facility-card:hover {
@@ -2428,7 +2385,6 @@
             background: #fff;
             display: flex;
             align-items: flex-end;
-            transition: box-shadow 0.18s, transform 0.18s;
         }
         .sports-facility-card img {
             width: 100%;
@@ -2465,8 +2421,9 @@
             }
         }
 /* --- Student Well-Being Page Styles --- */
-        .wellbeing-section {
-            background: #f5fbfa;
+.wellbeing-section {
+            height: 80vh;
+            background: #fafdf7;
             padding: 48px 0 40px 0;
         }
         .wellbeing-title {
@@ -2497,10 +2454,12 @@
             gap: 32px;
             flex: 1 1 0;
             min-width: 360px;
-            z-index: 2;
+            position: relative;
+            z-index: 3;
         }
         .wellbeing-cards-left {
             align-items: flex-end;
+            z-index:5;
         }
         .wellbeing-cards-right {
             align-items: flex-start;
@@ -2516,6 +2475,8 @@
             max-width: 380px;
             min-height: 90px;
             border: none;
+            position: relative;
+            z-index: 5;
         }
         .wellbeing-icon {
             font-size: 2rem;
@@ -2533,12 +2494,23 @@
             font-weight: 620;
             color: #4a5a6a;
         }
+        
+    .wellbeing-center-svg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(75%,-35%);
+        z-index: 2;
+        pointer-events: none;
+    }
         .wellbeing-center-img {
             position: relative;
             z-index: 3;
             display: flex;
             align-items: center;
             justify-content: center;
+            position: relative;
+       
         }
         .wellbeing-center-img img {
             width: 390px;
@@ -2552,14 +2524,41 @@
         .wellbeing-center-decor {
             position: absolute;
             top: 50%; left: 50%;
-            width: 620px; height: 730px;
+            width: 720px; height: 680px;
             background: none;
-            border: 2px solid #e0f3f7;
+            border: 0.28px solid #60828D;
             border-radius: 50%;
             transform: translate(-50%, -50%);
-            z-index: 1;
+            z-index: 0;
             pointer-events: none;
         }
+        /* --- Wellbeing Center Concentric Circles --- */
+    
+    .wellbeing-circle {
+        position: absolute;
+        border-radius: 50%;
+        pointer-events: none;
+        background: transparent;
+        z-index: 0;
+    }
+    .wellbeing-circle-outer {
+        width: 610px;
+        height: 590px;
+        border: 0.28px solid #60828D;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+    }
+    .wellbeing-circle-inner {
+        width: 510px;
+        height: 510px;
+        border: 0.28px solid #60828D;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+    }
         @media (max-width: 1100px) {
             .wellbeing-main {
                 flex-direction: column;
@@ -2638,15 +2637,16 @@
             margin: 0 auto;
         }
         .tools-img-teacher img {
-            height: 480px;
-            width: 380px;
+            height: 500px;
+            width: 450px;
             z-index: 2;
             position: relative;
         }
         .tools-img-bg {
             position: absolute;
-            top: 18px; left: 18px;
-            width: 140px; height: 140px;
+            top: 18px; left: 78px;
+            width: 140px; 
+            height: 140px;
             background: #bfe3f7;
             border-radius: 50%;
             z-index: 1;
@@ -2657,8 +2657,8 @@
             border-radius: 50%;
             opacity: 0.18;
         }
-        .tools-img-dot1 { width: 16px; height: 16px; top: 0; left: 120px; }
-        .tools-img-dot2 { width: 10px; height: 10px; top: 120px; left: 0; }
+        .tools-img-dot1 { width: 20px; height: 16px; top: 0; left: 120px; }
+        .tools-img-dot2 { width: 16px; height: 10px; top: 120px; left: 0; }
         .tools-img-dot3 { width: 8px; height: 8px; top: 80px; left: 160px; }
 
         .tools-row-bottom {
@@ -2671,7 +2671,7 @@
               box-shadow: 0 2px 16px rgba(63,166,247,0.10);
               padding: 24px 18px 18px 18px;
               height:530px;
-              max-width: 340px;
+              max-width: 440px;
               position: relative;
               margin-right: 32px;
               /* overflow-x: hidden; removed to allow image overflow */
@@ -2695,16 +2695,18 @@
         
         .tools-quiz-x, .tools-quiz-check {
             background: #fff;
-            border-radius: 50%;
-            width: 88px; height: 88px;
+            border: 2px solid red;
+            border-radius: 70%;
+            width: 40px; 
+            height: 45px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.3rem;
-            box-shadow: 0 1px 4px rgba(63,166,247,0.10);
+            font-size: 1.5rem;
             color: #e74c3c;
         }
         .tools-quiz-check {
+            border: 2px solid green;
             color: #2ecc71;
         }
         .tools-quiz-question {
@@ -2728,18 +2730,17 @@
         .tools-quiz-success {
                 background: #eaf6f3;
                 color: #2e8b7a;
-                font-size: 1.1rem;
+                font-size: 1.9rem;
                 border-radius: 8px;
-                padding: 8px 14px;
+                padding: 12px 14px;
                 display: flex;
                 align-items: center;
                 gap: 8px;
                 font-weight: 500;
                 position: absolute;
                 right: -150px;
-                bottom: 10px;
+                bottom: -38px;
                 z-index: 2;
-                margin-top: 0;
         }
     /* Helper for image and success positioning */
     .tools-quiz-img-box {
@@ -2750,13 +2751,12 @@
         }
         .tools-assessments {
             flex: 1 1 0;
-            min-width: 320px;
-            max-width: 500px;
+            max-width: 550px;
             margin-left: 32px;
         }
         .tools-assess-title {
-            font-size: 4rem;
-            font-weight: 700;
+            font-size: 4.7rem;
+            font-weight: 750;
             color: #222;
             margin-bottom: 10px;
         }
@@ -2901,9 +2901,7 @@
             background: #60828D;
             color: #fff;
             border: none;
-            cursor: pointer;
             font-weight: 700;
-            transition: background 0.2s, color 0.2s;
             margin: 0 8px;
             box-shadow: 0 2px 8px rgba(41,86,85,0.08);
         }
@@ -2938,7 +2936,6 @@
             font-size: 3.4rem;
             font-weight: 500;
             color: #222;
-            /* margin-bottom: 18px; */
             position: relative;
             z-index: 2;
         }
@@ -2960,15 +2957,12 @@
         .campus-glance-imgbox {
             position: relative;
             flex: 1 1 0;
-            /* min-width: 260px; */
             max-width: 760px;
             display: flex;
             align-items: center;
             justify-content: center;
-            /* margin-left: 100px; */
         }
         .campus-glance-imgbox img {
-            /* width: 100%; */
             max-width: 750px;
             height: 500px;
             object-fit: cover;
@@ -3021,9 +3015,6 @@
                 gap: 18px;
                 padding: 24px 0 18px 0;
             }
-            /* .campus-glance-content, .campus-glance-imgbox {
-                max-width: 95vw;
-            } */
             .campus-glance-imgbox img {
                 max-width: 95vw;
                 height: 160px;
@@ -3087,11 +3078,8 @@
             font-size: 1.7rem;
             padding: 12px 36px;
             border-radius: 6px;
-            /* border: none; */
             text-decoration: none;
             font-weight: 500;
-            /* transition: background 0.2s, color 0.2s;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08); */
         }
         .facilities-btn:hover {
             background: #3fa6f7;
@@ -3238,7 +3226,6 @@
             gap: 18px;
             align-items: center;
         }
-        /* Ensure parenting app images are side by side */
         .parenting-app-imgbox {
             display: flex;
             flex-direction: row;
@@ -3251,8 +3238,7 @@
             align-self: flex-start;
             border-radius: 14px;
 
-        }
-        
+        } 
         .parenting-app-img2 {
              width: 110%;
              height:600px;
@@ -3850,10 +3836,9 @@
 /* --- Reach Us Page Styles --- */
         .reach-hero {
             position: relative;
-            /* width: 100%; */
             min-height: 450px;
             background: url('images/reach.jpg') center/cover no-repeat;
-            filter: brightness(48%);
+            filter: brightness(60%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -4532,7 +4517,6 @@
             border-radius: 6px;
             font-size: 1rem;
             outline: none;
-            transition: border 0.2s;
             color: #1a2b2e;
             margin-bottom: 0;
         }
@@ -4625,7 +4609,6 @@
             font-size: 1.7rem;
             background: #d6e4d9;
             outline: none;
-            transition: border 0.2s;
         }
         .contact-form textarea:focus {
             border-color: #1a7f6b;
@@ -4710,7 +4693,6 @@
             color: #cbe3de;
             text-decoration: none;
             font-size: 1.3rem;
-            transition: color 0.2s;
         }
         .footer-links ul li a:hover {
             color: #1a7f6b;
@@ -4730,7 +4712,6 @@
             color: #fff;
             margin: 0 10px;
             font-size: 1.3rem;
-            transition: color 0.2s;
         }
         .footer-social a:hover {
             color: #1a7f6b;
