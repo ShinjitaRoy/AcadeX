@@ -196,10 +196,6 @@
         width: 100%;
         padding: 0 10px;
     }
-    .admission-banner {
-        flex-direction: column;
-        text-align: center;
-    }
     .campus-facilities-section, .learning-action-section, .beyond-classroom-section, .festivals-events-section, .student-achievements-section {
         padding: 20px 5px;
     }
@@ -221,15 +217,6 @@
     }
     .parenting-app-imgbox {
         margin-top: 18px;
-    }
-    .app-banner-content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    .app-banner-buttons {
-        flex-direction: column;
-        gap: 10px;
     }
     .contact-container {
         flex-direction: column;
@@ -296,31 +283,6 @@
     }
 
 }
-/* ADMISSION BANNER */
-.admission-banner {
-    width: 100vw;                        /* full viewport width */
-    margin-left: calc(50% - 50vw);       /* move to left edge */
-    margin-right: calc(50% - 50vw);      /* ensure full-bleed both sides */
-    box-sizing: border-box;
-    overflow: visible;
-    background: none;                    /* using an <img> instead */
-    border-radius: 0;                    /* remove rounded corners for full-bleed */
-}
-
-.admission-banner .admission-img {
-    width: 100%;                          /* cover full width */                
-}
-
-@media (max-width: 700px) {
-    .admission-banner {
-        margin-left: calc(50% - 50vw);
-        margin-right: calc(50% - 50vw);
-    }
-    .admission-banner .admission-img {
-        height: auto;
-    }
-}
-
 /* Custom-Footer section */
         .custom-footer{
         position: relative; /* needed for semicircle positioning */
@@ -781,135 +743,149 @@
             }
         }
 /* --- FAQ / Queries Section  --- */
-        .faq-section-index {
-            min-height: 50vh;
-            background: #f6fcfa;
-            padding: 32px 4vw 36px 0; /* keep image column flush */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 4px; /* reduced gap between columns */
-        }
-        .faq-section-index > .faq-images {
-            flex: 1 1 48%; /* keep image column size */
-            display: flex;
-            justify-content: flex-start; /* keep image in same spot */
-            align-items: center; /* center vertically with the FAQ content */
-        }
-        .faq-section-index > .faq-images img {
-            margin-left: 400px; 
-            max-width: 730px;
-            max-height: 680px; 
-            border-radius: 12px;
-        }
-        .faq-section-index .faq-content {
-            flex: 1 1 46%;
-            text-align: left;
-            margin-left: -540px; /* pull content more left to reduce gap while image stays in place */
-        }
-        .faq-section-index h2 {
-            font-size: 2.6rem;
-            color: #23443a;
-            font-weight: 800;
-            margin-bottom: 28px;
-            font-family: 'Segoe UI', Arial, sans-serif;
-        }
-            .faq-grid {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 18px 32px;
-                max-height: 400px;
-                max-width: 1000px;
-                margin: 0 auto 32px auto;
-            }
-            .faq-card {
-                background: #fff;
-                max-width: 800px;
-                border-radius: 12px;
-                box-shadow: 0 2px 12px rgba(26,127,107,0.08);
-                padding: 16px 18px;
-                font-size: 1.5rem;
-                color: #23443a;
-                font-weight: 500;
-                text-align: left;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                position: relative;
-                min-height: 38px;
-                transition: background 0.2s;
-                border: none;
-            }
-    
-            .faq-card .faq-question {
-                display: flex;
-                align-items: center;
-                font-weight: 700;
-                font-size: 1.07rem;
-                margin-bottom: 4px;
-                color: #23443a;
-            }
-            .faq-card.active .faq-question {
-                color: #3fa6a6;
-            }
-            .faq-icon {
-                font-size: 1.2em;
-                margin-right: 10px;
-                color: #7bb1b1;
-                min-width: 22px;
-                text-align: center;
-            }
-            .faq-toggle {
-                position: absolute;
-                right: 18px;
-                top: 18px;
-                font-size: 1.2em;
-                color: #7bb1b1;
-                cursor: pointer;
-                background: none;
-                border: none;
-                outline: none;
-                font-weight: bold;
-            }
-            .faq-card.active .faq-toggle {
-                color: #23443a;
-                background: #cbe3de;
-                border-radius: 4px;
-                padding: 2px 8px;
-            }
-            .faq-answer {
-                font-size: 0.98rem;
-                color: #23443a;
-                margin-top: 2px;
-                font-weight: 400;
-            }
-            @media (max-width: 700px) {
-                .faq-grid {
-                    grid-template-columns: 1fr;
-                    gap: 14px 0;
-                }
-            }
-            .login-buttons {
-            display: flex;
-            gap: 30px;
-            justify-content: center;
-            margin-bottom: 100px;
-            margin: 25px ;
-            }
+/* ================= FAQ SECTION (INDEX) ================= */
 
-            .login-btn {
-            background-color: #1c3e3e;
-            color: #fff;
-            font-weight: 600;
-            font-size: 1.9rem;
-            padding: 18px 32px;
-            border-radius: 7px;
-            }
+.faq-section-index {
+    background: #f6fcfa;
+    padding: 80px 0 60px;
+}
 
-            .login-btn:hover {
-            background-color: #3a7d7b;
-            transform: translateY(-2px) scale(1.03);
-            }
+.faq-wrapper-index {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* LEFT IMAGE */
+.faq-images-index img {
+    width: 100%;
+    max-width: 520px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* RIGHT CONTENT */
+.faq-content-index h2 {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: #23443a;
+    margin-bottom: 26px;
+}
+
+/* ===== MAIN FAQ BOX ===== */
+.faq-box-index {
+    background: #f1f3f3;
+    border-radius: 14px;
+    padding: 20px 22px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+
+/* EACH QUESTION BLOCK */
+.faq-item-index {
+    padding: 14px 0;
+}
+
+.faq-item-index:not(:last-child) {
+    border-bottom: 1px solid #dde7e4;
+}
+
+/* QUESTION ROW */
+.faq-question-index {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #23443a;
+    cursor: pointer;
+}
+
+/* TOGGLE PILL */
+.faq-toggle-index {
+    background: #ffffff;
+    color: #2e747c;
+    font-size: 1.4rem;
+    font-weight: 700;
+    border-radius: 6px;
+    padding: 2px 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+/* ANSWER */
+.faq-answer-index {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #23443a;
+    max-width: 95%;
+}
+
+/* COLLAPSED */
+.faq-item-index:not(.active) .faq-answer-index {
+    display: none;
+}
+
+/* ACTIVE QUESTION COLOR */
+.faq-item-index.active .faq-question-index {
+    color: #3fa6a6;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+    .faq-wrapper-index {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .faq-images-index img {
+        margin: auto;
+    }
+}
+/* ================= LOGIN BUTTONS (INDEX FAQ) ================= */
+
+.login-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin: 40px auto 0;
+    padding-bottom: 40px;
+}
+
+.login-btn {
+    background: #1f4f4c;
+    color: #ffffff;
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 16px 36px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    transition: all 0.25s ease;
+}
+
+.login-btn:hover {
+    background: #2f6f6a;
+    transform: translateY(-3px);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .login-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .login-btn {
+        width: 260px;
+        text-align: center;
+    }
+}
+
 /* ===== ABOUT US HERO SECTION (custom for about.html) ===== */
         .aboutus-hero {
             min-height: 80vh;
@@ -3874,9 +3850,10 @@
 /* --- Reach Us Page Styles --- */
         .reach-hero {
             position: relative;
-            width: 100%;
+            /* width: 100%; */
             min-height: 450px;
             background: url('images/reach.jpg') center/cover no-repeat;
+            filter: brightness(48%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -3889,13 +3866,14 @@
             padding: 60px 20px 40px 20px;
         }
         .reach-hero-overlay h1 {
-            font-size: 4.2rem;
+            font-size: 4.9rem;
             font-weight: 770;
-            margin-bottom: 18px;
+            margin-bottom: 20px;
             line-height: 1.1;
         }
         .reach-hero-desc {
             font-size: 1.7rem;
+            font-weight: 550;
             font-style: italic;
             color: #e6f0ee;
             margin-bottom: 0;
@@ -3909,7 +3887,7 @@
             display: flex;
             align-items: flex-start;
             justify-content: center;
-            gap: 48px;
+            gap: 70px;
             height: 600px;
             max-width: 1100px;
             margin: 0 auto;
@@ -3922,13 +3900,13 @@
             margin-top: 38px;
         }
         .reach-campus-info h2 {
-            font-size: 2.6rem;
+            font-size: 2.9rem;
             color: #23443a;
             font-weight: 800;
             margin-bottom: 28px;
         }
         .reach-campus-address {
-            font-size: 1.6rem;
+            font-size: 1.9rem;
             color: #23443a;
             font-weight: 600;
             margin-bottom: 10px;
@@ -3950,7 +3928,7 @@
             margin-top: 30px;
         }
         .reach-campus-img img {
-            width: 320px;
+            width: 380px;
             height: 450px;
         }
 
@@ -4032,7 +4010,7 @@
         .point-contact-card {
             background: #fff;
             border-radius: 12px;
-            box-shadow: 0 2px 12px rgba(26,127,107,0.08);
+            box-shadow: 0 9px 18px rgba(8, 37, 31, 0.08);
             padding: 16px 18px;
             font-size: 2rem;
             color: #23443a;
@@ -4050,48 +4028,62 @@
             }
         }
 /* --- Working Hours Section --- */
-        .working-hours-section {
+         .working-hours-section {
+            min-height: 75vh;
             background: #f6fcfa;
-            padding: 32px 0 36px 0;
+            padding: 32px 0 36px;
             text-align: center;
         }
         .working-hours-section h2 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             color: #23443a;
             font-weight: 800;
             margin-bottom: 28px;
             font-family: 'Segoe UI', Arial, sans-serif;
         }
         .working-hours-table {
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 2px 12px rgba(26,127,107,0.06);
-            max-width: 800px;
+            background: #ffffff;
+            border-radius: 16px;
+            max-width: 1250px;
             margin: 0 auto;
-            border:3.5px solid #bfe6e0;
-            padding: 0;
+            border: 2.5px solid #539188;
+            box-shadow: 0 4px 14px rgba(26, 127, 107, 0.08);
             overflow: hidden;
         }
         .working-hours-row {
+            position: relative;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 14px 24px;
-            border-bottom: 1px solid #e6f0ee;
-            font-size: 1.05rem;
+            height: 90px;
+            padding: 0 110px;
+            font-size: 1.66rem;
             color: #23443a;
+            background: #ffffff;
         }
-        .working-hours-row:last-child {
-            border-bottom: none;
+        .working-hours-row:last-child { 
+            border-bottom: none; 
+            margin-right: 90px; 
+        }
+        .working-hours-row::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 60px;
+            right: 60px;
+            height: 2px;
+            background-color: #c7ddd9;
+        }
+        .working-hours-row:last-child::after {
+            display: none;
         }
         .working-hours-day {
             font-weight: 500;
-            text-align: left;
         }
         .working-hours-time {
             font-weight: 400;
-            text-align: right;
         }
+
         @media (max-width: 600px) {
             .working-hours-table {
                 max-width: 90vw;
@@ -4103,98 +4095,91 @@
         }
 /*Frequently Asked Questions Section ===== */
         .faq-section {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 40px 0 0 0;
-            display: flex;
-            gap: 40px;
-            align-items: flex-start;
-            position: relative;
+            max-width: 1200px;
+            height: 55vh;
+            margin: 50px auto;
+            padding: 0 20px;
+            font-family: "Segoe UI", sans-serif;
         }
-        .faq-section::before {
-            content: '';
+        .faq-section h2 {
+            text-align: center;
+            font-size: 3.2rem;
+            font-weight: 900;
+            color: #2c4f4a;
+            margin-bottom: 55px;
+        }
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px 34px;
+            align-items: start;
+        }
+        .faq-card {
+            background: #e7f0ef;
+            border-radius: 16px;
+            padding: 22px 24px;
+            position: relative;
+            box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+            min-height: 70px;               
+        }
+        .faq-card.active {
+            background: #eaebeb;
+            min-height: 130px;
+        }
+        .faq-question {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 1.7rem;
+            font-weight: 600;
+            color: #294b46;
+            padding-right: 48px;     
+        }
+        .faq-icon {
+            width: 34px;
+            height: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2e747c;
+            font-size: 1.35rem;
+            flex-shrink: 0;
+        }
+        .faq-answer {
+            margin-top: 14px;
+            padding-left: 48px;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #3b3b3b;
+        }
+        .faq-card:not(.active) .faq-answer {
+            display: none;
+        }
+        .faq-toggle {
             position: absolute;
-            top: 600px;
-            right: 1740px;
-            width: 120px;
-            height: 120px;
-            background: #2e747c;
+            top: 18px;
+            right: 18px;
+            width: 34px;
+            height: 34px;
             border-radius: 50%;
-            opacity: 0.7;
-        }
-        .faq-section::after {
-            content: '';
-            position: absolute;
-            right: 0;
-            top: 0;
-            width: 120px;
-            height: 120px;
-            background: none;
-            z-index: 0;
-        }
-        .faq-images {
-            flex: 1.2;
-            height: 100%;
-            position: relative;
-            z-index: 1;
-        }
-        .faq-images img {
-            width: 100%;
-            height: 100%;
-            max-width: 340px;
-            max-height: 800px;
-            border-radius: 12px;
-            box-shadow: 0 2px 12px rgba(60,80,80,0.08);
-        }
-        .faq-title {
-            font-size: 3.6rem;
-            font-weight: 700;
-            color: #222;
-            margin-left: 300px;
-            margin-bottom: 10px;
-        }
-        .faq-list {
-            background: #e6eaec; /* slightly darker background */
-            border-radius: 12px;
-            padding: 14px 20px;
-            margin-left: 250px;
-            margin-right: 350px;
-        }
-        .faq-list .faq-q {
-            font-weight: 700;
-            color: #23443a;
-            margin-top: 20px;
-            margin-bottom: 24px;
-            text-align: left;
-            margin-left: 50px;
-            font-size: 2.1rem;
-        }
-        .faq-list .faq-a {
-            color: #222;
-            font-size: 1.6rem;
-            text-align: justify;
-            margin-left: 50px;
-        }
-        .faq-list .faq-other {
-            border-top: 1px solid #dbeae3;
-            color: #23443a;
-            font-size: 1.6rem;
-            font-weight: 700;
+            background: #ffffff;
+            border: none;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.12);
             display: flex;
-            text-align: left;
-            margin-left: 50px;
-            margin-top: 40px;
-            justify-content: space-between;
+            align-items: center;
+            justify-content: center;
         }
-        .faq-list .faq-other:not(:last-child) {
-            margin-bottom: 8px;
+        .faq-toggle i {
+            font-size: 1.2rem;
+            color: #2e747c;
         }
-        .faq-list .faq-other span {
-            font-size: 1.9rem;
-            font-weight: 800;
-            color: #7ba6a3;
-            margin-left: 8px;
+
+        /* ================= HOVER EFFECT ================= */
+        .faq-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 26px rgba(0,0,0,0.08);
         }
+
         @media (max-width: 900px) {
             .faq-section-index {
                 flex-direction: column;
@@ -4221,49 +4206,44 @@
         }
         
 /* --- Career home-page section --- */
-        .career-hero {
+       .career-hero {
             position: relative;
             width: 100%;
-            min-height: 260px;
-            background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
-            display: flex;
+            min-height: 380px;
+            background: url('images/career-background.jpg') center/cover no-repeat;
             align-items: center;
             justify-content: center;
         }
         .career-hero-overlay {
-            background: rgba(26,43, 46, 0.68);
-            border: 2px dashed #7bb1b1;
-            border-radius: 12px;
-            padding: 48px 32px 36px 32px;
-            max-width: 700px;
-            margin: 60px auto 0 auto;
+            max-width: 1200px;
+            margin: 0px auto 0 auto;
             text-align: center;
             color: #fff;
-            box-shadow: 0 4px 24px rgba(26,127,107,0.08);
+            padding: 60px 20px 40px 20px;
         }
         .career-hero-overlay h1 {
-            font-size: 2.8rem;
-            font-weight: 800;
+            font-size: 4.2rem;
+            font-weight: 770;
             margin-bottom: 18px;
             line-height: 1.1;
         }
         .career-hero-desc {
-            font-size: 1.18rem;
+            font-size: 1.7rem;
             font-style: italic;
-            margin-bottom: 0;
             color: #e6f0ee;
+            margin-bottom: 0;
         }
 
         .career-benefits-section {
             background: #fff;
-            padding: 48px 0 60px 0;
+            padding: 48px 0 30px 0;
         }
         .career-benefits-content {
             display: flex;
             align-items: flex-start;
             justify-content: center;
-            gap: 48px;
-            max-width: 1200px;
+            gap: 350px;
+            max-width: 2000px;
             margin: 0 auto;
             padding: 0 20px;
         }
@@ -4271,23 +4251,26 @@
             flex: 1.2;
             min-width: 260px;
             text-align: left;
+            
         }
         .career-benefits-label {
-            font-size: 0.98rem;
+            font-size: 1.3rem;
             color: #7bb1b1;
             font-weight: 700;
             letter-spacing: 1px;
-            margin-bottom: 8px;
+            margin-bottom: 2px;
         }
         .career-benefits-left h2 {
-            font-size: 2rem;
+            font-size: 3.5rem;
             color: #23443a;
             font-weight: 800;
             margin-bottom: 10px;
+            margin-top:-10px;
             font-family: 'Segoe UI', Arial, sans-serif;
         }
         .career-benefits-left p {
-            font-size: 1.05rem;
+            font-size: 1.6rem;
+            
             color: #222;
             margin-bottom: 0;
         }
@@ -4309,25 +4292,27 @@
             min-height: 120px;
         }
         .career-benefit-icon {
-            width: 48px;
-            height: 48px;
+            width: 98px;
+            height: 98px;
             border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
+            font-size: 2.5rem;
             margin-bottom: 12px;
         }
         .career-benefit-title {
-            font-size: 1.15rem;
+            font-size: 1.5rem;
             font-weight: 700;
             color: #23443a;
-            margin-bottom: 6px;
+            margin-bottom: 22px;
         }
         .career-benefit-desc {
-            font-size: 0.98rem;
+            font-size: 1.11rem;
+            width:300px;
             color: #23443a;
             font-weight: 400;
+            word-spacing: 0.3em;
         }
         @media (max-width: 900px) {
             .career-benefits-content {
@@ -4354,19 +4339,20 @@
         }
 /* --- Career Openings Section --- */
         .career-opening-section {
-            background: #f6fcfa;
-            padding: 40px 0 60px 0;
+            background: #ebf5f2;
+            padding: 5px 0 60px 0;
             text-align: center;
         }
         .career-opening-section h2 {
-            font-size: 2.3rem;
+            font-size: 4rem;
             color: #23443a;
             font-weight: 800;
-            margin-bottom: 10px;
+            margin-bottom: 30px;
             font-family: 'Segoe UI', Arial, sans-serif;
         }
         .career-opening-section p {
-            font-size: 1rem;
+            font-size: 1.2rem;
+            font-weight: 550;
             color: #444;
             margin-bottom: 32px;
         }
@@ -4381,16 +4367,15 @@
             background: #fff;
             border-radius: 12px;
             box-shadow: 0 2px 12px rgba(26,127,107,0.08);
-            padding: 18px 24px;
-            font-size: 1.08rem;
+            padding: 28px 34px;
+            font-size: 1.5rem;
             color: #23443a;
             font-weight: 600;
             text-align: left;
             display: flex;
             flex-direction: column;
-            position: relative;
-            cursor: pointer;
-            transition: box-shadow 0.2s, background 0.2s;
+            width: 980px;
+            margin-left: -240px;
         }
         .career-opening-item.active {
             background: #f7f9fa;
@@ -4400,22 +4385,18 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            font-size: 1.08rem;
+            font-size: 1.6rem;
             font-weight: 600;
         }
         .career-opening-arrow {
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             color: #7bb1b1;
             margin-left: 12px;
-            transition: transform 0.2s;
-        }
-        .career-opening-item.active .career-opening-arrow {
-            transform: rotate(180deg);
         }
         .career-opening-details {
-            font-size: 0.98rem;
+            font-size: 1.2rem;
             color: #444;
-            font-weight: 400;
+            font-weight: 500;
             margin-top: 10px;
             line-height: 1.5;
         }
@@ -4430,19 +4411,20 @@
         }
 /* --- How We Hire Section --- */
         .how-we-hire-section {
-            background: #f6fcfa;
-            padding: 40px 0 60px 0;
+            background: #fff;
+            padding: 10px 0 70px 0;
             text-align: center;
         }
         .how-we-hire-section h2 {
-            font-size: 2.3rem;
+            font-size: 3.8rem;
             color: #23443a;
             font-weight: 800;
-            margin-bottom: 10px;
+            margin-bottom: 30px;
             font-family: 'Segoe UI', Arial, sans-serif;
         }
         .how-we-hire-section p {
-            font-size: 1rem;
+            font-size: 1.4rem;
+            font-weight: 600;
             color: #444;
             margin-bottom: 32px;
         }
@@ -4450,13 +4432,13 @@
             display: flex;
             justify-content: center;
             align-items: stretch;
-            gap: 0;
-            max-width: 1100px;
+            gap: 40px;
+            max-width: 1400px;
             margin: 0 auto;
         }
         .how-we-hire-step {
             flex: 1;
-            background: #fff;
+            background: #f1fcfa;
             padding: 32px 18px 28px 18px;
             text-align: left;
             border-right: 2px solid #e6f0ee;
@@ -4468,24 +4450,24 @@
             color: #fff;
         }
         .how-we-hire-step-num {
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-weight: 700;
-            color: #bdbdbd;
-            margin-bottom: 8px;
+            color: #585555;
+            margin-bottom: 50px;
         }
         .how-we-hire-step:last-child .how-we-hire-step-num {
             color: #fff;
             opacity: 0.7;
         }
         .how-we-hire-step-title {
-            font-size: 1.1rem;
+            font-size: 1.9rem;
             font-weight: 700;
-            margin-bottom: 8px;
+            margin-bottom: 16px;
         }
         .how-we-hire-step-desc {
-            font-size: 0.98rem;
+            font-size: 1.4rem;
             color: #444;
-            font-weight: 400;
+            font-weight: 500;
         }
         .how-we-hire-step:last-child .how-we-hire-step-desc {
             color: #e0f2f1;
@@ -4505,28 +4487,30 @@
         }
 /* --- How to Apply Section --- */
         .how-to-apply-section {
-            background: #f6fcfa;
+            height: 25vh;
+            background: #ebf5f2;
             padding: 36px 0 48px 0;
             text-align: center;
         }
         .how-to-apply-section h2 {
-            font-size: 2.8rem;
+            font-size: 3.7rem;
             color: #23443a;
             font-weight: 800;
             margin-bottom: 18px;
             font-family: 'Segoe UI', Arial, sans-serif;
         }
         .how-to-apply-section p {
-            font-size: 2rem;
+            font-size: 2.3rem;
+            font-weight: 500;
             color: #23443a;
             margin-bottom: 0;
         }
         .how-to-apply-email {
             display: inline-flex;
             align-items: center;
-            font-size: 1.4rem;
+            font-size: 1.9rem;
             color: #23443a;
-            margin-top: 10px;
+            margin-top: 15px;
             font-weight: 500;
             text-decoration: none;
             gap: 8px;
