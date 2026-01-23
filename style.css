@@ -2473,7 +2473,7 @@
             gap: 18px;
             padding: 22px 28px 22px 20px;
             max-width: 380px;
-            min-height: 90px;
+            min-height: 100px;
             border: none;
             position: relative;
             z-index: 5;
@@ -2514,7 +2514,7 @@
         }
         .wellbeing-center-img img {
             width: 390px;
-            height: 600px;
+            height: 650px;
             object-fit: cover;
             border-radius: 24px;
             box-shadow: 0 4px 32px rgba(63,166,247,0.10);
@@ -3371,9 +3371,9 @@
             position: absolute;
             top: 14px;
             left: 14px;
-            width: 105%;
-            height: 100%;
-            border: 2px solid #9fb2cf;
+            width:110%;
+            height: 110%;
+            border: 2px solid #21467e;
             border-radius: 8px;
             z-index: -1;
         }
@@ -3493,9 +3493,9 @@
             position: absolute;
             top: 14px;
             left: 14px;
-            width: 105%;
-            height: 100%;
-            border: 2px solid #9fb2cf; /* same blue border */
+            width:110%;
+            height: 110%;
+            border: 2px solid #21467e; /* same blue border */
             border-radius: 8px;
             z-index: -1;
         }
@@ -3615,9 +3615,9 @@
             position: absolute;
             top: 14px;
             left: 14px;
-            width: 105%;
-            height: 100%;
-            border: 2px solid #9fb2cf;
+            width:110%;
+            height: 110%;
+            border: 2px solid #21467e;
             border-radius: 8px;
             z-index: -1;
         }
@@ -3739,9 +3739,9 @@
             position: absolute;
             top: 14px;
             left: 14px;
-            width: 105%;
-            height: 100%;
-            border: 2px solid #9fb2cf;
+            width:110%;
+            height: 110%;
+            border: 2px solid #21467e;
             border-radius: 8px;
             z-index: -1;
         }
@@ -3844,7 +3844,7 @@
             justify-content: center;
         }
         .reach-hero-overlay {
-            max-width: 1200px;
+            max-width: 1500px;
             margin: 60px auto 0 auto;
             text-align: center;
             color: #fff;
@@ -3852,7 +3852,7 @@
         }
         .reach-hero-overlay h1 {
             font-size: 4.9rem;
-            font-weight: 770;
+            font-weight: 800;
             margin-bottom: 20px;
             line-height: 1.1;
         }
@@ -3865,7 +3865,7 @@
         }
         .reach-campus-section {
             background: #fff;
-            height: 500px;
+            height: 650px;
             padding: 20px 0 30px 0;
         }
         .reach-campus-content {
@@ -3874,38 +3874,38 @@
             justify-content: center;
             gap: 70px;
             height: 600px;
-            max-width: 1100px;
+            max-width: 1650px;
             margin: 0 auto;
             padding: 0 20px;
         }
         .reach-campus-info {
             flex: 1.5;
-            min-width: 260px;
+            min-width: 350px;
             text-align: left;
             margin-top: 38px;
         }
         .reach-campus-info h2 {
-            font-size: 2.9rem;
+            font-size: 3.9rem;
             color: #23443a;
             font-weight: 800;
             margin-bottom: 28px;
         }
         .reach-campus-address {
-            font-size: 1.9rem;
+            font-size: 2.6rem;
             color: #23443a;
             font-weight: 600;
             margin-bottom: 10px;
             line-height: 1.4;
         }
         .reach-campus-info p {
-            font-size: 1.55rem;
-            font-weight: 500;
+            font-size: 2.2rem;
+            font-weight: 600;
             color: #222;
             margin-bottom: 0;
         }
         .reach-campus-img {
             flex: 1;
-            min-height: 420px;
+            min-height: 470px;
             min-width: 320px;
             display: flex;
             align-items: center;
@@ -3913,8 +3913,8 @@
             margin-top: 30px;
         }
         .reach-campus-img img {
-            width: 380px;
-            height: 450px;
+            width: 430px;
+            height: 580px;
         }
 
         @media (max-width: 900px) {
@@ -3942,9 +3942,9 @@
         }
 /*---Google-map section---*/
         .google-maps-section {
-            max-height: 1600px;
-            max-width: 1100px;
-            margin: 36px auto 60px auto;
+            max-height: 1400px;
+            max-width: 1600px;
+            margin: 36px 50px 50px 350px;
             text-align: center;
         }
         .google-maps-section h3 {
@@ -3956,25 +3956,27 @@
             display: inline-block;
         }
         .maps-pin {
-            font-size: 2.3rem;
-            margin-right: 6px;
+            text-align: center;
+            font-size: 3.9rem;
         }
         .maps-image-container {
-            padding: 10px;
-            margin-top: 8px;
+            margin-top: 30px;
             box-sizing: border-box;
+            height: 820px;
+            min-width: 1800px;
         }
         .maps-image-container img {
-            border: 20px solid #d6ecf4;
+            border: 30px solid #d6ecf4;
             border-radius: 40px;
             display: block;
             object-fit: cover;
-            min-width: 1100px;
+            height: 700px;
+            width: 1800px;
         }
 /*---Point Contact Section---*/
         .point-contact-section {
             min-height: 650px;
-            background: #ebf3f0;
+            background: #F2F8F5;
             padding: 32px 0 36px 0;
             text-align: center;
         }
@@ -3996,7 +3998,7 @@
             background: #fff;
             border-radius: 12px;
             box-shadow: 0 9px 18px rgba(8, 37, 31, 0.08);
-            padding: 16px 18px;
+            padding: 16px 30px;
             font-size: 2rem;
             color: #23443a;
             font-weight: 650;
@@ -4005,6 +4007,7 @@
             align-items: center;
             justify-content: flex-start;
             min-height: 40px;
+            min-width: 80px;
         }
         @media (max-width: 700px) {
             .point-contact-grid {
@@ -4080,6 +4083,7 @@
         }
 /*Frequently Asked Questions Section ===== */
         .faq-section {
+            background: #F2F8F5;
             max-width: 1200px;
             height: 55vh;
             margin: 50px auto;
@@ -4423,7 +4427,7 @@
         }
         .how-we-hire-step {
             flex: 1;
-            background: #f1fcfa;
+            background: #F1F7F4;
             padding: 32px 18px 28px 18px;
             text-align: left;
             border-right: 2px solid #e6f0ee;
@@ -4431,7 +4435,7 @@
         }
         .how-we-hire-step:last-child {
             border-right: none;
-            background: #23443a;
+            background: #264D4B;
             color: #fff;
         }
         .how-we-hire-step-num {
